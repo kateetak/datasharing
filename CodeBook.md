@@ -1,7 +1,52 @@
-﻿# CodeBook
+﻿CodeBook
+====================
 
-## Study design
-*as available on the website and described in the data package*
+Variables
+====================
+Following variables are included in the tidy data set:
+* the subjects: a total of 30 subjects have been observed for this study, they are identified by a number (from 1 to 30)
+* the activities: the observations have been collected while each subject was performing different activities. There are six activities, each one  has a descriptive name in the tidy data set, the full set of options is: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+* the mean of the features: a set of 79 features observed on the subject when performing different activities. Each column is the mean of the values by subject and activity of a feature, for a description of the feature please refer to the study itself as the data have not been modified in their units or scale (the only transformation applied has been the calculation of the mean). The 79 features have been extracted from the original set 9f 561 by selecting only the ones providing a mean or a std value.
+
+Summary choices made
+====================
+The observation have been summarized by the subject and the activity, a total of 180 rows are available corresponding to 6 activities for every subject 30 (180 = 30 * 6).
+
+Transformations to the numerical data
+====================
+The numerical observations have not been transformed in their units or scale. The 79 features have only been summarized by calculating their mean.
+
+Data clean up
+====================
+The following changes have been applied to the data set in order to obtain the tidy data set.
+
+## Data aggregation
+The train and test data set have been aggregated in one data set. As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
+Also the list subjects and activities have been merged accordingly.
+
+## Column names
+Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
+Further transformations have not been applied with the purpose of keeping the column names short.
+
+## Categorical values
+The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
+
+## Units of the variables
+As in the raw data, also in the tidy data the features have no units. The features in the raw data were already normalized by dividing by the range (by dividing the units by the same units, the units are cancelled)
+
+The instruction script
+====================
+## Run_analysis.R
+The full set of instructions used is available in the run_analysis.R script available in this github repository.
+
+## Versions
+The tidy data have been obtaining by running the script on a Windows 7 platform, using R version 3.1.0 (2014-04-10).
+
+Study design
+===========
+*The following explanation has been sourced from the website where the package has been dowloaded and from the description in the data package itself*
+
+
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
@@ -70,14 +115,18 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-### Notes: 
-- Features are normalized and bounded within [-1,1].
+Notes: 
+====================
+- Features are normalized and bounded within [-1,1]
+- The features have no units because they have been normalized (the data has been scaled by dividing by the range, and when you divide units by the same units, the units are cancelled.)
 - Each feature vector is a row on the text file.
 
-### Reference website:
+Reference website:
+====================
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-### License:
+License:
+====================
 Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
@@ -86,36 +135,3 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
-
-## CodeBook
-### Variables
-Following variables are included in the tidy data set:
-* the subjects: a total of 30 subjects have been observed for this study, they are identified by a number (from 1 to 30)
-* the activities: the observations have been collected while each subject was performing different activities. There are six activities, each one  has a descriptive name in the tidy data set, the full set of options is: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* the mean of the features: a set of 79 features observed on the subject when performing different activities. Each column is the mean of the values by subject and activity of a feature, for a description of the feature please refer to the study itself as the data have not been modified in their units or scale (the only transformation applied has been the calculation of the mean). The 79 features have been extracted from the original set 9f 561 by selecting only the ones providing a mean or a std value.
-
-### Summary choices made
-The observation have been summarized by the subject and the activity, a total of 180 rows are available corresponding to 6 activities for every subject 30 (180 = 30 * 6).
-
-### Transformations to the numerical data
-The numerical observations have not been transformed in their units or scale. The 79 features have only been summarized by calculating their mean.
-
-### Data clean up
-The following changes have been applied to the data set in order to obtain the tidy data set.
-#### Data aggregation
-The train and test data set have been aggregated in one data set. As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
-Also the list subjects and activities have been merged accordingly.
-
-#### Column names
-Each column has a descriptive label. The invalid characters (e.g. "-" and ",") included in the raw data have been removed and each column has a unique name.
-
-#### Categorical values
-The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
-
-
-## The instruction script 
-#### Run_analysis.R
-The full set of instructions used is available in the run_analysis.R script available in this github repository.
-
-#### Versions
-The tidy data have been obtaining by running the script on a Windows 7 platform, using R version 3.1.0 (2014-04-10).
