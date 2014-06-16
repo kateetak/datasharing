@@ -1,45 +1,41 @@
 ﻿CodeBook
 ====================
 
-Variables
-====================
+###Variables
 Following variables are included in the tidy data set:
 * the subjects: a total of 30 subjects have been observed for this study, they are identified by a number (from 1 to 30)
 * the activities: the observations have been collected while each subject was performing different activities. There are six activities, each one  has a descriptive name in the tidy data set, the full set of options is: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 * the mean of the features: a set of 79 features observed on the subject when performing different activities. Each column is the mean of the values by subject and activity of a feature, for a description of the feature please refer to the study itself as the data have not been modified in their units or scale (the only transformation applied has been the calculation of the mean). The 79 features have been extracted from the original set 9f 561 by selecting only the ones providing a mean or a std value.
 
-Summary choices made
-====================
+###Summary choices made
 The observation have been summarized by the subject and the activity, a total of 180 rows are available corresponding to 6 activities for every subject 30 (180 = 30 * 6).
 
-Transformations to the numerical data
-====================
+###Transformations to the numerical data
 The numerical observations have not been transformed in their units or scale. The 79 features have only been summarized by calculating their mean.
 
-Data clean up
-====================
+###Data clean up
 The following changes have been applied to the data set in order to obtain the tidy data set.
 
-## Data aggregation
+###Data aggregation
 The train and test data set have been aggregated in one data set. As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
 Also the list subjects and activities have been merged accordingly.
 
-## Column names
+###Column names
 Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
 Further transformations have not been applied with the purpose of keeping the column names short.
 
-## Categorical values
+###Categorical values
 The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
 
-## Units of the variables
+###Units of the variables
 As in the raw data, also in the tidy data the features have no units. The features in the raw data were already normalized by dividing by the range (by dividing the units by the same units, the units are cancelled)
 
 The instruction script
 ====================
-## Run_analysis.R
+###Run_analysis.R
 The full set of instructions used is available in the run_analysis.R script available in this github repository.
 
-## Versions
+###Versions
 The tidy data have been obtaining by running the script on a Windows 7 platform, using R version 3.1.0 (2014-04-10).
 
 Study design
