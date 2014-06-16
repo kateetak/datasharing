@@ -115,12 +115,14 @@ step4 <- function(obs, features) {
   # all features column names are processed as follow
   # - they are transformed into lower case
   # - the special character -,() are removed
+  # - the bodybody string has been replaced by body
   # I'm not using the make.names function because I also want to avoid "."
   # in the column names
   
   # the names of the columns are unique
   names(obs) <-  c("activitylabel",
-                   paste(gsub("-|,|\\(|\\)", "", tolower(features))))
+                   paste(gsub("bodybody", "body", 
+                              gsub("-|,|\\(|\\)", "", tolower(features)))))
   
   # I decided not to go to full proper English names to avoid long column names
   # I also followed what was explained here:

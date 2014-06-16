@@ -1,14 +1,14 @@
 Run analysis markdown
 ===========
 
-## The raw data
+The raw data
 ===========
 The raw data can be accessed at the following url:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 The data need to be downloaded locally on the workstation where the analysis is performed and they have to be made available (in their zipped form) in the same working directory of R.
 
-## How to run the analysis
+How to run the analysis
 ===========
 There is one single script required for the analysis.
 
@@ -18,7 +18,7 @@ obs <- run_analysis.R
 After it has been sourced using the source command:
 source("run_analysis.R")
 
-## What is returned by the analysis
+What is returned by the analysis
 ===========
 At the end of the analysis a file, called "analysis_result.txt", is written to the working directory of R.
 The file is added to the same directory where the raw data are available.
@@ -26,7 +26,7 @@ This is the same file that has been uploaded as the "tidy data set".
 
 The script also returns the data.frame written to the file.
 
-## How is the script organized?
+How is the script organized?
 ===========
 In the script there are more than one functions, each one is used for this analysis. From an high level point of view, the code has been organized so that each step mentioned in the assignement is performed by a separate function.
 

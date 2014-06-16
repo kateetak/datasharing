@@ -22,7 +22,12 @@ Also the list subjects and activities have been merged accordingly.
 
 ###Column names
 Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
+The names of the columns have been modified to be completely lower case.
 Further transformations have not been applied with the purpose of keeping the column names short.
+
+**Assumption: the column names containing "BodyBody" were in the data by mistake (i.e. they were not included in the features list documentation) and they have been modified to contain the word Body only ones.
+
+
 
 ###Categorical values
 The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
