@@ -1,11 +1,17 @@
 ﻿CodeBook
 ====================
 
+###Resulting data set
+The resulting data set contains 81 columns and 180 rows.
+
 ###Variables
 Following variables are included in the tidy data set:
 * the subjects: a total of 30 subjects have been observed for this study, they are identified by a number (from 1 to 30)
 * the activities: the observations have been collected while each subject was performing different activities. There are six activities, each one  has a descriptive name in the tidy data set, the full set of options is: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* the mean of the features: a set of 79 features observed on the subject when performing different activities. Each column is the mean of the values by subject and activity of a feature, for a description of the feature please refer to the study itself as the data have not been modified in their units or scale (the only transformation applied has been the calculation of the mean). The 79 features have been extracted from the original set 9f 561 by selecting only the ones providing a mean or a std value.
+* the mean of the features: a set of 79 features observed on the subject when performing different activities. Each column is the mean of the values by subject and activity of a feature, for a description of the feature please refer to the study itself as the data have not been modified in their units or scale (the only transformation applied has been the calculation of the mean). The 79 features have been extracted from the original set of 561 by selecting only the ones containing a mean or a std value. ***Note***: meanFreq values have not been excluded
+
+###NA values
+The tidy data set does not contain any NA values.
 
 ###Summary choices made
 The observation have been summarized by the subject and the activity, a total of 180 rows are available corresponding to 6 activities for every subject 30 (180 = 30 * 6).
@@ -18,15 +24,17 @@ The following changes have been applied to the data set in order to obtain the t
 
 ###Data aggregation
 The train and test data set have been aggregated in one data set. As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
+
 Also the list subjects and activities have been merged accordingly.
 
 ###Column names
 Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
+
 The names of the columns have been modified to be completely lower case.
-Further transformations have not been applied with the purpose of keeping the column names short.
+
+Further transformations have not been applied with the purpose of keeping the column names short. The naming convention applied to the column names is consistent and follows specific rules explained in the raw data set (see explanation below).
 
 **Assumption: the column names containing "BodyBody" were in the data by mistake (i.e. they were not included in the features list documentation) and they have been modified to contain the word Body only ones.
-
 
 
 ###Categorical values
