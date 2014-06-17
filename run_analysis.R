@@ -4,6 +4,8 @@
 # the function writes a file in the working directory called "analysis_result.txt"
 # and returns the data.frame written to the file
 
+# Changelog: v1.0 - built on 2014.06.17 for the Coursera "Getting and Cleaning Data" project
+
 run_analysis <- function() {
   # load the library required to perform the functions
   # merge (join) at step3
