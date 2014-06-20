@@ -20,14 +20,15 @@ The observation have been summarized by the subject and the activity, a total of
 The numerical observations have not been transformed in their units or scale. The 79 features have only been summarized by calculating their mean.
 
 ###Data clean up
-The following changes have been applied to the data set in order to obtain the tidy data set.
+The following changes have been applied to the data set in order to obtain the tidy data set:
 
-###Data aggregation
-The train and test data set have been aggregated in one data set. As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
+####Data aggregation
+The train and test data set have been aggregated in one data set.
+As requested by the assignment, no variable has been added to keep track of the original type of observation (train or data).
 
 Also the list subjects and activities have been merged accordingly.
 
-###Column names
+####Column names
 Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
 
 The names of the columns have been modified to be completely lower case.
@@ -37,10 +38,10 @@ Further transformations have not been applied with the purpose of keeping the co
 **Assumption: the column names containing "BodyBody" were in the data by mistake (i.e. they were not included in the features list documentation) and they have been modified to contain the word Body only ones.
 
 
-###Categorical values
+####Categorical values
 The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
 
-###Units of the variables
+####Units of the variables
 As in the raw data, also in the tidy data the features have no units. The features in the raw data were already normalized by dividing by the range (by dividing the units by the same units, the units are cancelled)
 
 The instruction script
