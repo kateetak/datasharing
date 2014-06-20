@@ -20,6 +20,7 @@ The observation have been summarized by the subject and the activity, a total of
 The numerical observations have not been transformed in their units or scale. The 79 features have only been summarized by calculating their mean.
 
 ###Data clean up
+============
 The following changes have been applied to the data set in order to obtain the tidy data set:
 
 ####Data aggregation
