@@ -4,6 +4,10 @@
 ###Resulting data set
 The resulting data set contains 81 columns and 180 rows.
 
+The resulting data has the following structure:
+- it includes the headers (first column)
+- it does not include row names
+
 ###Variables
 Following variables are included in the tidy data set:
 * the subjects: a total of 30 subjects have been observed for this study, they are identified by a number (from 1 to 30)
@@ -30,7 +34,7 @@ As requested by the assignment, no variable has been added to keep track of the 
 Also the list subjects and activities have been merged accordingly.
 
 ####Column names
-Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-" and ",") included in the raw data and each column has a unique name.
+Each column has a descriptive label. The names have been obtained by removing the invalid characters (e.g. "-", ",", "(" and ")") included in the raw data and each column has a unique name.
 
 The names of the columns have been modified to be completely lower case.
 
@@ -38,12 +42,13 @@ Further transformations have not been applied with the purpose of keeping the co
 
 **Assumption: the column names containing "BodyBody" were in the data by mistake (i.e. they were not included in the features list documentation) and they have been modified to contain the word Body only ones.
 
-
 ####Categorical values
 The values in the column for the activities have been transformed from their numerical value to a descriptive name (e.g. "WALKING" instead of 1)
 
 ####Units of the variables
 As in the raw data, also in the tidy data the features have no units. The features in the raw data were already normalized by dividing by the range (by dividing the units by the same units, the units are cancelled)
+
+
 
 The instruction script
 ====================
